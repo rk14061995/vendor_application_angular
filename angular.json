@@ -15,7 +15,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "rxjs-compat"
-           ],
+            ],
             "outputPath": "dist/project-one",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,7 +28,6 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-            
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css",
               "node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
@@ -150,5 +149,8 @@
       }
     }
   },
-  "defaultProject": "project-one"
+  "defaultProject": "project-one",
+  "cli": {
+    "analytics": "21fc75ca-728c-4319-b154-42b5541dccdb"
+  }
 }
