@@ -25,6 +25,9 @@ import { VendoComponent } from './vendo/vendo.component';
 import { VendorUpdateRequestComponent } from './vendor-update-request/vendor-update-request.component';
 import { VendorUpdateUnblockComponent } from './vendor-update-unblock/vendor-update-unblock.component';
 import { CarrierVendorRequestComponent } from './carrier-vendor-request/carrier-vendor-request.component';
+import { DirectVenderRequestComponent } from './direct-vender-request/direct-vender-request.component';
+import { MassCommunicationComponent } from './mass-communication/mass-communication.component';
+import { CKEditorModule } from 'ckeditor4-angular';
 
 const material= [
   MatStepperModule
@@ -51,6 +54,8 @@ const material= [
     VendorUpdateRequestComponent,
     VendorUpdateUnblockComponent,
     CarrierVendorRequestComponent,
+    DirectVenderRequestComponent,
+    MassCommunicationComponent,
 
   ],
   imports: [
@@ -59,7 +64,8 @@ const material= [
     BrowserAnimationsModule,
     FormsModule,
     MatStepperModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    CKEditorModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

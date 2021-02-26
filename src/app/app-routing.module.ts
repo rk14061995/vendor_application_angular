@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -11,6 +11,9 @@ import {  RejectedComponent} from "./tables_request/rejected/rejected.component"
 import { VendorUpdateRequestComponent } from "./vendor-update-request/vendor-update-request.component";
 import { VendorUpdateUnblockComponent } from "./vendor-update-unblock/vendor-update-unblock.component";
 import { CarrierVendorRequestComponent } from "./carrier-vendor-request/carrier-vendor-request.component";
+import { DirectVenderRequestComponent } from './direct-vender-request/direct-vender-request.component';
+import { MassCommunicationComponent } from './mass-communication/mass-communication.component';
+
 const routes: Routes = [
   {path:'',component:DashboardComponent },
   {path:'request-form',component:VendorRequestComponent},
@@ -21,11 +24,14 @@ const routes: Routes = [
   //New Routes
   {path:'vendor-update-requests', component:VendorUpdateRequestComponent },
   {path:'vendor-unblock-requests', component:VendorUpdateUnblockComponent },
-  {path:'carrier-vendor-requests', component:CarrierVendorRequestComponent }
+  {path:'carrier-vendor-requests', component:CarrierVendorRequestComponent },
+  {path:'direct-vender-request', component: DirectVenderRequestComponent },
+  {path:'mass-communication', component:MassCommunicationComponent  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  
+exports: [RouterModule]
 })
 export class AppRoutingModule { }

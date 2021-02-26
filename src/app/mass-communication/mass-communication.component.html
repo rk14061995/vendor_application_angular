@@ -1,0 +1,94 @@
+<div class="row">
+    <!-- Left col -->
+    <section class="col-lg-12 connectedSortable">
+      <!-- Custom tabs (Charts with tabs)-->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <!-- <i class="fas fa-chart-pie mr-1"></i> -->
+            Mass Emails
+          </h3>
+        
+        </div><!-- /.card-header -->
+        <div class="card-body">
+          <div class="tab-content p-0">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart"
+                 style="position: relative;">
+                <!-- <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas> -->
+                <form #vendor_request="ngForm" >
+                    <div class="d-flex">
+                        <div class=""><input type="radio" checked name="vendors"/><span class="ml-2">Registered Vendors </span></div>
+                        <div class="ml-3"><input type="radio"  name="vendors"/><span class="ml-2">Non-Registered Vendors </span></div>
+                    </div>
+                    <hr/>
+                    <div class="row mt-1">
+                        <div class="col-md-6">
+                            <label>By Country</label>
+                            <select type="text" name="" class="form-control" required>
+                                <option selected disabled>Select </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>By Region</label>
+                            <select type="text" name="" class="form-control" required>
+                                <option selected disabled>Select </option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-6">
+                            <label>To <small class="text-danger">(Max 500 emails at a time)</small></label>
+                            <input type="text" name="" class="form-control" required/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Subject</label>
+                            <input type="text" name=""  class="form-control" required/>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Body</label>
+                            <br>
+                            <ckeditor
+                                #editor
+                                [(ngModel)]="model.description"
+                                id="description"
+                                name="description"
+                                type="divarea">
+                            </ckeditor>
+                        </div>
+                    </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                        <label>Attachments</label>
+                        <br>
+                        <input type="file" ngModel name="supp_doc" />
+                    </div>
+                   </div>
+                    <hr>
+                    <div class="row mt-1">
+                        <div class="col-md-12">
+                            <Button class="btn btn-success float-right">Submit</Button> 
+                            <!-- <input type="button" class="btn btn-success float-right" value="Submit Request" />                 -->
+                        </div>
+                    </div>
+                </form>
+             </div>
+          
+          </div>
+        </div><!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+
+    
+
+    </section>
+    <!-- /.Left col -->
+    <!-- right col (We are only adding the ID to make the widgets sortable)-->
+  
+    <!-- right col -->
+  </div>
